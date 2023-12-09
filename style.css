@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,600;0,9..40,900;1,9..40,200;1,9..40,400&family=Montserrat&family=Nunito&family=Playfair+Display:wght@500&family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,600;0,9..40,900;1,9..40,200;1,9..40,400&family=Montserrat&family=Nunito&family=Playfair+Display:wght@500&family=Poppins:wght@500&family=Silkscreen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,600;0,9..40,900;1,9..40,200;1,9..40,400&family=Montserrat&family=Nunito&family=Playfair+Display:wght@500&family=Poppins:wght@500&family=Shizuru&family=Silkscreen&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    /* font-family: 'DM Sans', sans-serif; */
+    /* font-family: 'Silkscreen', sans-serif; */
+    font-family: 'Shizuru', sans-serif;
+}
+body {
+    background-color: #001021;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.game {
+    width: 80vmin;
+    height: 80vmin;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    height: 25vmin;
+    width: 25vmin;
+    background-color: #11B5E4;
+    border-radius: 10px;
+    margin: 5px;
+    box-shadow: 0px 0px 2px #0CAADC;
+    font-size: 100px;
+    font-weight: 600;
+    color: black;
+}
+#resetbtn {
+    padding: 20px ;
+    background-color: #1481BA;
+    font-size: 20px ;
+    font-weight: 600;
+    border-radius: 10px;
+}
+h1 {
+    font-size: 50px;
+    color: #11B5E4;
+    text-align: center;
+}
+.lowercontainer {
+    height: 100vh; 
+    width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateY(-50px);
+}
+.winnerannc {
+    font-size: 50px;
+    color: #11B5E4;
+}
+#newgamebtn {
+    padding: 20px ;
+    background-color: #1481BA;
+    font-size: 20px ;
+    font-weight: 600;
+    border-radius: 10px;
+    transform: translateX(-10px);
+}
+.hide {
+    display: none;
+}
+
+@media (max-width : 700px) {
+    .game {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .box {
+        font-size: 70px;
+    }
+    #resetbtn {
+        transform: translateY(20px);
+    }
+    .winnerannc {
+        font-size: 40px;
+    }
+    .lowercontainer {
+        width: 100%;
+    }
+
+}
+.audio {
+    display: none;
+}
+.volume {
+    font-size: 30px;
+    position: absolute;
+    top: 20px;
+    font-weight: 700;
+    border: 3px solid #1481BA;
+    border-radius: 20px;
+    padding: 10px;
+    right: 100px;
+    color: #1481BA;
+    cursor: pointer;
+}
