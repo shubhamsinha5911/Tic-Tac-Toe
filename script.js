@@ -10,17 +10,36 @@ let clickMusic = document.querySelector(".clickmusic");
 let bgm = document.querySelector("audio");
 let musicInfo = document.querySelector(".onoff");
 let winBgm = document.querySelector(".winbgm");
+let audio = document.querySelector(".audio");
+let onOff = document.querySelector(".onoff");
+
+
 let turnO = true;
 
-musicBtn.addEventListener("click", function() {
-   if (bgm.volume === 0 ) {
-      bgm.volume = 0.5;
-      musicInfo.innerText = "Music-On";
-   } else {
-      bgm.volume = 0;
-      musicInfo.innerText = "Music-Off";
-   }
-});
+
+bgm.volume = 0.5;
+
+
+function toggleAudio() {
+  if (audio.paused) {
+    audio.play();
+    onOff.textContent = "Music-On";
+  } else {
+    audio.pause();
+    onOff.textContent = "Music-Off";
+  }
+}
+
+
+// musicBtn.addEventListener("click", function() {
+//    if (bgm.paused) {
+//       bgm.play();
+//       musicInfo.innerText = "Music-on";
+//     } else {
+//       bgm.pause();
+//       musicInfo.innerText = "Music-off";
+//     }
+// });
 
 const winPatterns = [
    [0, 1, 2], 
@@ -105,3 +124,4 @@ const checkWinner = () => {
 
 resetBtn.addEventListener("click", resetGame );
 newgameBtn.addEventListener("click", resetGame );
+
